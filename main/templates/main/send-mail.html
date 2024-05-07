@@ -1,0 +1,10 @@
+{% extends "main/base.html" %}
+{% block content %}
+<div class="main">
+    <form method="post">
+        {% csrf_token %}
+    <input type="text" name="mail">
+    <button class="btn btn-success" type="submit">Отправить на почту</button>
+</form>
+</div>
+{% endblock content %}

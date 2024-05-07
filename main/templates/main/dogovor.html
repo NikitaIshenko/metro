@@ -1,0 +1,10 @@
+{% extends "main/base.html" %}
+{% block content %}
+<div class="main">
+    <form method="post">
+        {% csrf_token %}
+    <button class="btn btn-primary" type="submit" name="download" value="True">Скачать договор</button>
+    <a href="{% url 'main:send_mail' pk_dogovor %}" class="btn btn-success">Отправить на почту</a>
+</form>
+</div>
+{% endblock content %}
